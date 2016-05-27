@@ -1,0 +1,27 @@
+{% extends "FSPBundle::layout.html.twig" %}
+{% block body %}
+{% block blocGauche %}
+  <div id="blocGauche">
+    <div><img src="{{asset('bundles/fsp/images/user.png')}}" id="userAccueil"</img></div>
+    <div id="connexion">
+      <a href="{{path('fsp_connexion')}}" alt="Connexion" title="Connexion">Connexion</a>
+    </div>
+    <div id="barreV"></div>
+    <div id="inscription">
+      <a href="{{path('fsp_inscription')}}" alt="S'inscrire" title="S'inscrire">S'inscrire</a>
+    </div>
+  </div>
+{% endblock %}
+{% block blocCentre %}
+  <div id="blocCentreAccueil">
+   <div id="contenu">
+    <p class="presentation">
+       Bienvenue sur la site de la plateforme d'annonces pour étudiants étrangers arrivant en France.</br>
+Pour accéder aux différents thèmes, il vous faut être connecté: grâce à cette inscription, vous pourrez être au courant des différents cours, évènements de la ville mais aussi des annonces pour les logements.</br>
+Vous pourrez également contribuer à répondre à ses annonces par des commentaires.</br>
+Alors, inscrivez-vous et bonne continuation sur le site !
+    </p>
+   </div>
+  </div>
+{% endblock %}
+{% endblock %}

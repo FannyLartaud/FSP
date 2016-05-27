@@ -1,0 +1,20 @@
+{% extends "FSPBundle:User:accueil.html.twig" %}
+{% block blocCentre %}
+  <div id="blocCentre">
+   <div id="contenu">
+    <div id="gererAnnonces">
+   {% for uneAnnonce in lesAnnonces %}
+     {% set titre = uneAnnonce.titre %}
+     {% set contenu = uneAnnonce.contenu %}
+     {% set date = uneAnnonce.date %}
+     {% set prenom = uneAnnonce.prenom %}
+     {% set nom = uneAnnonce.nom %}
+       <h3>{{titre}}</h3>
+      </div> 
+     <p>{{contenu}} </br>
+       </br>
+       Ajoutée le {{date}} par {{prenom}} {{nom}}</p>
+   </div>
+  </div>
+{% endfor %}
+{% endblock %}

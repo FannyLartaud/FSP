@@ -1,0 +1,50 @@
+{% extends "FSPBundle:User:accueil.html.twig" %}
+{% block blocCentre %}
+  <div id="blocCentre">
+   <div id="contenu">
+    <div id="gererAnnonces">
+       {% for uneAnnonce in lesAnnonces %}
+        {% set titre      = uneAnnonce.titre %}
+        {% set date       = uneAnnonce.date %}
+        {% set theme      = uneAnnonce.theme %}
+        {% set contenu    = uneAnnonce.contenu %}
+        {% set langue     = uneAnnonce.langue %}
+        {% set idannonce  = uneAnnonce.id %}
+     <h3>Modifier une annonce</h3>
+    </div>
+    <form method="POST" action="{{path('fsp_modifierannonce',{'id':uneAnnonce.id})}}" class="formModifier">
+      <div class="ajouter">
+       <label for="titre"> Titre : </label>
+       <input id="titre" type="text" name="titre" value="{{titre}}"/></br>
+       <br/>
+       <label for="date"> Date : </label>
+       <input id="date" type="date" name="date" value="{{date}}"/></br>
+       <br/>
+       <label for="langue"> Langue : </label>
+       <select id="langue" name="langue">
+        <option value="{{langue}}" select="selected" >Toutes les langues</option>
+        <option value="Français">Français</option>
+        <option value='Anglais'>Anglais</option>
+        <option value='Chinois'>Chinois</option>
+       </select></br>
+       <br/>
+       <label for="theme"> Thème : </label>
+       <select id="theme" name="theme">
+        <option value="{{theme}}" select="selected">Tous les thèmes</option>
+        <option value="Logement">Logement</option>
+        <option value="Cours">Cours</option>
+        <option value="Evenement">Evénement</option>
+        <option value="Culture">Culture</option>
+       </select></br>
+       <br/>
+       <label for="info"> Contenu de l'annonce : </label></br>
+       <textarea name="contenu" id="info" rows="10" cols="50" >{{contenu}}</textarea>
+       <br/>
+       <input id="validerIns" type="submit" value="Valider" name="valider"/>
+       <input id="annulerIns" type="reset" value="Annuler" name="annuler"/>
+      </div>
+    </form>
+   </div>
+  </div>
+{% endfor %}
+{% endblock %}

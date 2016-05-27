@@ -1,0 +1,75 @@
+{% extends "FSPBundle:User:layout.html.twig" %}
+{% block body %}
+{% block blocGauche %}
+  <div id="blocGaucheAccueil">
+    <form class="form">
+	<div class="recherche">
+		<input type="text" name="keyword" placeholder="Recherche"/>
+		<button><img src="{{asset('bundles/fsp/images/search.png')}}" id="search"</img></button>
+	</div>
+    </form>
+    <div id="barreH1"></div>
+    <div><img src="{{asset('bundles/fsp/images/user.png')}}" id="user"</img>
+    </div>
+    <div id="compte">
+      <p>Bonjour 
+          {% if(app.session.get('prenom') is defined ) %}
+            {{app.session.get('prenom')}}
+          {% endif %}
+      </p>
+    </div>
+    <div id="barreH2"></div>
+     <div id="compteUser">
+      <a href="{{path('fsp_compte')}}" alt="Mon Compte">Mon Compte</a>
+     </div>
+    <div id="barreVAccueil"></div>
+        <div><img src="{{asset('bundles/fsp/images/deconnexion.png')}}" id="deconnexion"</img></div>
+        <div id="decoLien">
+        <a href="{{path('fsp_deconnexion')}}" alt="Déconnexion">Déconnexion</a>
+    </div>
+    <div id="barreH6Accueil"></div>
+    <div id="mesannonces">
+      <a href="{{path('fsp_mesannonces')}}" alt="Mes annonces" title="Mes annonces">Mes Annonces</a>
+    </div>
+    <div id="barreH3Accueil"></div>
+    <div id="ajouterAnnonce">
+      <a href="{{path('fsp_ajouter')}}" alt="Ajouter une annonce" title="Ajouter une annonce">Ajouter une annonce</a>
+    </div>
+    <div id="barreH4Accueil"></div>
+    <div id="modifierAnnonce">
+      <a href="{{path('fsp_modifier')}}" alt="Modifier une annonce" title="Modifier une annonce">Modifier une annonce</a>
+    </div>
+    <div id="barreH5Accueil"></div>
+    <div id="supprimerAnnonce">
+      <a href="{{path('fsp_supprimer')}}" alt="Supprimer une annonce" title="Supprimer une annonce">Supprimer une annonce</a>
+    </div>
+  </div>
+{% endblock %}
+{% block blocCentre %}
+  <div id="blocCentre">
+   <div id="contenu">
+    <div id="Annonces">
+     <h3>Annonces</h3>
+    </div>
+   <table class ="listeAnnonce">
+       {% for uneAnnonce in lesAnnonces %}
+        {% set imageTheme = uneAnnonce.imageTheme %}
+	    {% set titre      = uneAnnonce.titre %}
+	    {% set date       = uneAnnonce.date %}
+        {% set prenom     = uneAnnonce.prenom %}
+	    {% set image      = uneAnnonce.image %}
+        {% set idannonce  = uneAnnonce.id %}
+
+       <tr>
+           <td class="theme"><img src="{{asset('bundles/fsp/images/')}}{{imageTheme}}" id="theme"></img></td>
+	       <td class="titre"><a href="{{path('fsp_afficherannonce',{'id':uneAnnonce.id})}}" class="titreclick" alt="titreannonce">{{titre}}</a></td>
+           <td class="date">Le {{date}}</td>
+           <td class="prenom">Par {{prenom}}</td>
+           <td class="statut"><img src="{{asset('bundles/fsp/images/')}}{{image}}" id="statut"></img></td>
+       </tr>
+       {% endfor %}
+      </table>
+    </div>
+  </div>
+{% endblock %}
+{% endblock %}

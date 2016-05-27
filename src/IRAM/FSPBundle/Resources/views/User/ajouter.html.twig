@@ -1,0 +1,11 @@
+{% extends "FSPBundle:User:accueil.html.twig" %}
+{% block blocCentre %}
+  <div id="blocCentre">
+   <div id="contenu">
+    <div id="gererAnnonces">
+     <h3>Ajouter une annonce</h3>
+    </div>
+     {{ include ("FSPBundle:User:ajouterannonce.html.twig") }}
+   </div>
+  </div>
+{% endblock %}

@@ -1,0 +1,24 @@
+{% extends "FSPBundle::accueil.html.twig" %}
+{% block blocCentre %}
+  <div id="blocCentreAccueil">
+   <div id="contenu">
+    <div id="gererConnexion">
+     <h3>Connexion</h3>
+    </div>
+    {% if(message is defined)%}
+      <div class="erreur">
+         <img src="{{asset('bundles/fsp/images/erreur.png')}}" class="erreurLogo"></img>
+       <ul>{{message}}</ul>
+      </div>
+    {% endif %}	
+    <form method="POST" action="{{path('fsp_valider_connection')}}" class="formConnexion">
+     <div class="connexion">
+          <input id="email" type="text" name="email" placeholder="E-mail *"/>
+          <input id="info" type="password" name="mdp" placeholder="Mot de passe *"/>
+          <input id="valider" type="submit" value="Valider" name="valider"/>
+          <input id="annuler" type="reset" value="Annuler" name"annuler"/>
+     </div>
+    </form>
+   </div>
+  </div>
+{% endblock %}

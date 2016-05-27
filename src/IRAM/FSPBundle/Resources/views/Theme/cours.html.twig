@@ -1,0 +1,26 @@
+{% extends "FSPBundle:User:accueil.html.twig" %}
+{% block blocCentre %}
+  <div id="blocCentre">
+   <div id="contenu">
+    <div id="AnnoncesTheme">
+     <h3>Annonces - Cours</h3>
+    </div>
+    <table class ="listeAnnonce">
+       {% for uneAnnonce in lesAnnonces %}
+         {% set titre  = uneAnnonce.titre %}
+         {% set date   =  uneAnnonce.date %}
+         {% set prenom =  uneAnnonce.prenom %}
+         {% set image   =  uneAnnonce.image %}
+         {% set idannonce = uneAnnonce.id %}
+
+       <tr>
+           <td class="titre"><a href="{{path('fsp_afficherannonce',{'id':uneAnnonce.id})}}" class="titreclick" alt="titreannonce">{{titre}}</a></td>
+           <td class="date">Le {{date}}</td>
+           <td class="prenom">Par {{prenom}}</td>
+           <td class="statut"><img src="{{asset('bundles/fsp/images/')}}{{image}}" id="statut"></img></td>
+       </tr>
+       {% endfor %}
+      </table>
+     </div>
+    </div>
+{% endblock %}
