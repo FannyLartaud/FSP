@@ -78,17 +78,25 @@ class PdoFsp{
 
         public function inscription($email,$nom,$prenom,$dateNaissance,$pays,$mdp){
 	$req = "insert into profil values('$email','$nom','$prenom','$dateNaissance','$pays','$mdp')";
+var_dump ($req);
 		PdoFsp::$monPdo->exec($req);
 	}
 
-	    public function ajouterAnnonce($titre,$date,$refnomlangue,$refemail,$contenu,$refidtheme){
-	$req = "insert into annonce(titre,date,refnomlangue,refemail,contenu,refidtheme,refidetat) values('$titre','$date','$refnomlangue','$refemail','$contenu','$refidtheme','1')";
-print_r ($req);
+        public function getajouterAnnonce(){
+    $req = "select annonce.titre as titre, annonce.date as date, theme.libelle as theme, annonce.contenu as contenu from annonce, theme, profil, langue where annonce.refidtheme = theme.id and annonce.refemail = profil.email and annonce.refnomlangue = langue.nomlangue and annonce.refidetat = etat.id" ;
+var_dump ($req);
+        PdoFsp::$monPdo->query($req);
+   }
+
+	    public function ajouterAnnonce($date,$titre,$contenu,$refnomlangue,$refemail,$refidtheme){
+	$req = "INSERT INTO `FSP`.`annonce` (`id`, `date`, `titre`, `contenu`, `refnomlangue`, `refemail`, `refidtheme`, `refidetat`) VALUES (NULL, '$date', '$titre', '$contenu', '$refnomlangue', '$refemail', '$refidtheme', '1') ";
+var_dump ($req);
 		PdoFsp::$monPdo->exec($req);
 	}
 
 	public function getAfficherAnnonce($id){
 		$req = " select annonce.titre as titre, annonce.date as date,  annonce.contenu as contenu,profil.nom as nom, profil.prenom as prenom from annonce, profil where annonce.refemail = profil.email and annonce.id = '$id' " ;
+var_dump ($req);
 		$rs = PdoFsp::$monPdo->query($req);
         $lesLignes = $rs->fetchAll();
         return $lesLignes;
@@ -100,7 +108,7 @@ print_r ($req);
     }
 
   public function supprimerannonce($id){
-       $req ="delete from annonce where annonce.id =".$id;
+       $req ="delete from annonce where annonce.id = '$id' ";
        PdoFsp::$monPdo->exec($req);
    }
 

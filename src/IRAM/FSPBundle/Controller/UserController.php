@@ -117,7 +117,7 @@ class UserController extends Controller
  $refidtheme = $request->request->get('theme');
  $refidetat = '1';
  $contenu = $request->request->get('contenu');
- $pdo ->ajouterAnnonce($titre,$date,$refnomlangue,$refemail,$contenu,$refidtheme);
+ $pdo ->ajouterAnnonce($date,$titre,$contenu,$refnomlangue,$refemail,$refidtheme);
  $lesAnnonces = $pdo->getAnnoncesUser($refemail);
  return $this->render('FSPBundle:User:mesannonces.html.twig', array ('lesAnnonces'=>$lesAnnonces));
 
@@ -141,7 +141,7 @@ class UserController extends Controller
   $request = $this->get('request');
   $id = $request->request->get('id');
   $email = $session->get('email');
-  $AfficherAnnonce = $pdo->getAfficherAnnonce($id);
+  $pdo->getAfficherAnnonce($id);
   $lesAnnonces = $pdo->getAnnonces();
   return $this->render ('FSPBundle:User:afficherannonce.html.twig', array('lesAnnonces'=>$lesAnnonces));
  }
@@ -165,7 +165,9 @@ class UserController extends Controller
 
   public function ajouterAnnonceAction()
   {
-     return $this->render('FSPBundle:User:ajouter.html.twig');
+   $pdo = $this->get('fsp.pdo');
+   $pdo -> getajouterAnnonce(); 
+   return $this->render('FSPBundle:User:ajouter.html.twig');
   }
 
 
