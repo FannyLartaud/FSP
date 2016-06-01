@@ -15,7 +15,6 @@
 	    {% set titre      = uneAnnonce.titre %}
 	    {% set date       = uneAnnonce.date %}
 	    {% set image      = uneAnnonce.image %}
-   
        <tr>
            <td class="theme"><img src="{{asset('bundles/fsp/images/')}}{{imageTheme}}" id="theme"></img></td>
 	       <td class="titre"><a href="{{path('fsp_afficherannonce',{'id':uneAnnonce.id})}}" class="titreclick" alt="titreannonce">{{titre}}</a></td>

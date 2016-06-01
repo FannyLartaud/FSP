@@ -1,0 +1,19 @@
+{% extends "FSPBundle:User:accueil.html.twig" %}
+{% block blocCentre %}
+  <div id="blocCentre">
+   <div id="contenu">
+    <div id="gererAnnonces">
+    {% for unCommentaire in lesCommentaires %}
+      {% set contenu = unCommentaire.contenu %}
+      {% set date = unCommentaire.date %}
+      {% set prenom = unCommentaire.prenom %}
+      {% set nom = unCommentaire.nom %}
+       <h3>{{titre}}</h3>
+      </div> 
+     <p>{{contenu}} </br>
+       </br>
+       Ajoutée le {{date}} par {{prenom}} {{nom}}</p>
+   </div>
+  </div>
+    {% endfor %}
+{% endblock %}

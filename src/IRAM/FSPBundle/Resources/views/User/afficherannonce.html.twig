@@ -3,18 +3,21 @@
   <div id="blocCentre">
    <div id="contenu">
     <div id="gererAnnonces">
-   {% for uneAnnonce in lesAnnonces %}
-     {% set titre = uneAnnonce.titre %}
-     {% set contenu = uneAnnonce.contenu %}
-     {% set date = uneAnnonce.date %}
-     {% set prenom = uneAnnonce.prenom %}
-     {% set nom = uneAnnonce.nom %}
+    {% for uneAnnonce in lesAnnonces %}
+      {% set titre = uneAnnonce.titre %}
+      {% set contenu = uneAnnonce.contenu %}
+      {% set date = uneAnnonce.date %}
+      {% set prenom = uneAnnonce.prenom %}
+      {% set nom = uneAnnonce.nom %}
        <h3>{{titre}}</h3>
       </div> 
      <p>{{contenu}} </br>
        </br>
        Ajoutée le {{date}} par {{prenom}} {{nom}}</p>
+
+       <a href="{{path('fsp_affichercom')}}" alt="affichercom"><button class="affichercom" >Afficher les commentaires</button></a>
+       <a href="{{path('fsp_ajoutercom')}}"  alt="ajoutercom"><button class="ajoutercom">Ajouter un commentaire</button></a>
    </div>
   </div>
-{% endfor %}
+    {% endfor %}
 {% endblock %}

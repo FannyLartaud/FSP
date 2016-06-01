@@ -79,6 +79,12 @@ fsp_modifierannonce:
     requirements:
       id: \d+
 
+fsp_validermodifier:
+    path:   /validermodifier/{id}
+    defaults: { _controller: FSPBundle:User:validermodifier}
+    requirements:
+        id: \d+
+
 fsp_supprimerannonce:
     path:   /supprimer-annonce/{id}
     defaults: { _controller: FSPBundle:User:supprimerAnnonce }
@@ -92,6 +98,18 @@ fsp_supprimer:
 fsp_validersuppression:
     path:   /validersuppression/{id}
     defaults: { _controller: FSPBundle:User:validersuppression }
+
+fsp_affichercom:
+    path:   /afficher-com
+    defaults: { _controller: FSPBundle:User:affichercom }
+
+fsp_ajoutercom:
+    path:   /ajouter-com
+    defaults: { _controller: FSPBundle:User:ajoutercom }
+
+fsp_validercommentaire:
+    path:   /valider-ajout-com
+    defaults: { _controller: FSPBundle:User:validercommentaire }
 
 
 

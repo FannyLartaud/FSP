@@ -218,6 +218,11 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
             return $this->mergeDefaults(array_replace($matches, array('_route' => 'fsp_modifierannonce')), array (  '_controller' => 'IRAM\\FSPBundle\\Controller\\UserController::modifierAnnonceAction',));
         }
 
+        // fsp_validermodifier
+        if (0 === strpos($pathinfo, '/validermodifier') && preg_match('#^/validermodifier/(?P<id>\\d+)$#s', $pathinfo, $matches)) {
+            return $this->mergeDefaults(array_replace($matches, array('_route' => 'fsp_validermodifier')), array (  '_controller' => 'IRAM\\FSPBundle\\Controller\\UserController::validermodifierAction',));
+        }
+
         if (0 === strpos($pathinfo, '/supprimer-annonce')) {
             // fsp_supprimerannonce
             if (preg_match('#^/supprimer\\-annonce/(?P<id>\\d+)$#s', $pathinfo, $matches)) {
@@ -234,6 +239,24 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
         // fsp_validersuppression
         if (0 === strpos($pathinfo, '/validersuppression') && preg_match('#^/validersuppression/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
             return $this->mergeDefaults(array_replace($matches, array('_route' => 'fsp_validersuppression')), array (  '_controller' => 'IRAM\\FSPBundle\\Controller\\UserController::validersuppressionAction',));
+        }
+
+        if (0 === strpos($pathinfo, '/a')) {
+            // fsp_affichercom
+            if ($pathinfo === '/afficher-com') {
+                return array (  '_controller' => 'IRAM\\FSPBundle\\Controller\\UserController::affichercomAction',  '_route' => 'fsp_affichercom',);
+            }
+
+            // fsp_ajoutercom
+            if ($pathinfo === '/ajouter-com') {
+                return array (  '_controller' => 'IRAM\\FSPBundle\\Controller\\UserController::ajoutercomAction',  '_route' => 'fsp_ajoutercom',);
+            }
+
+        }
+
+        // fsp_validercommentaire
+        if ($pathinfo === '/valider-ajout-com') {
+            return array (  '_controller' => 'IRAM\\FSPBundle\\Controller\\UserController::validercommentaireAction',  '_route' => 'fsp_validercommentaire',);
         }
 
         // homepage

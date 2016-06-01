@@ -1,0 +1,22 @@
+{% extends "FSPBundle:User:accueil.html.twig" %}
+{% block blocCentre %}
+  <div id="blocCentre">
+   <div id="contenu">
+    <div id="gererAnnonces">
+     <h3>Ajouter un commentaire</h3>
+    </div>
+     <form method="POST" action="{{path('fsp_validercommentaire')}}" class="formAjoutercom">
+      <div class="ajouter">
+       <label for="date"> Date : </label>
+       <input id="date" type="date" name="date" placeholder="AAAA/MM/JJ"/></br>
+       <br/>
+       <label for="info"> Contenu du commentaire: </label></br>
+       <textarea name="contenu" id="info" rows="10" cols="50"  onfocus="if(this.value=='Votre commentaire ici.'){this.value='';}" onblur="if(this.value==''){this.value='Votre commentaire ici.';}">Votre commentaire ici.</textarea>
+       <br/>
+       <input id="validerIns" type="submit" value="Valider" name="valider"/>
+       <input id="annulerIns" type="reset" value="Annuler" name="annuler"/>
+      </div>
+    </form>
+   </div>
+  </div>
+{% endblock %}

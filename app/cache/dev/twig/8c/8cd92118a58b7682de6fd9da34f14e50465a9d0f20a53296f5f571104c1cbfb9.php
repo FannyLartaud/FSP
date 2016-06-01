@@ -15,8 +15,8 @@ class __TwigTemplate_251f0b03e3bf31751bd68c5a744f60a8dd5ae9f09addbb167b308f4c2c3
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_9ccf1d30f6cb03d8a26dac36e3957b4a47e16aa129a31ac442ab15278d23cdbd = $this->env->getExtension("native_profiler");
-        $__internal_9ccf1d30f6cb03d8a26dac36e3957b4a47e16aa129a31ac442ab15278d23cdbd->enter($__internal_9ccf1d30f6cb03d8a26dac36e3957b4a47e16aa129a31ac442ab15278d23cdbd_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "TwigBundle:Exception:error.xml.twig"));
+        $__internal_f6855ffb75cf26daefd2db0fabdac06fa4798968c4154cfc6eca9ef1263c2640 = $this->env->getExtension("native_profiler");
+        $__internal_f6855ffb75cf26daefd2db0fabdac06fa4798968c4154cfc6eca9ef1263c2640->enter($__internal_f6855ffb75cf26daefd2db0fabdac06fa4798968c4154cfc6eca9ef1263c2640_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "TwigBundle:Exception:error.xml.twig"));
 
         // line 1
         echo "<?xml version=\"1.0\" encoding=\"";
@@ -31,7 +31,7 @@ class __TwigTemplate_251f0b03e3bf31751bd68c5a744f60a8dd5ae9f09addbb167b308f4c2c3
         echo "\" />
 ";
         
-        $__internal_9ccf1d30f6cb03d8a26dac36e3957b4a47e16aa129a31ac442ab15278d23cdbd->leave($__internal_9ccf1d30f6cb03d8a26dac36e3957b4a47e16aa129a31ac442ab15278d23cdbd_prof);
+        $__internal_f6855ffb75cf26daefd2db0fabdac06fa4798968c4154cfc6eca9ef1263c2640->leave($__internal_f6855ffb75cf26daefd2db0fabdac06fa4798968c4154cfc6eca9ef1263c2640_prof);
 
     }
 

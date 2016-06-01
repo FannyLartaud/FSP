@@ -21,20 +21,20 @@ class __TwigTemplate_f440bd11faef5ae71feb36c3b2deeed77e4b9eb474e8d943e63d670a19c
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_1fb245ba9f3c64b69a41910bf6b239d7a4050f5713a6ddc15c4eb9b89294a3ac = $this->env->getExtension("native_profiler");
-        $__internal_1fb245ba9f3c64b69a41910bf6b239d7a4050f5713a6ddc15c4eb9b89294a3ac->enter($__internal_1fb245ba9f3c64b69a41910bf6b239d7a4050f5713a6ddc15c4eb9b89294a3ac_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "FSPBundle:User:supprimer.html.twig"));
+        $__internal_8c580746244a8297f0f19da086221763dd9229e83af5ebd549082d2ac30aed6c = $this->env->getExtension("native_profiler");
+        $__internal_8c580746244a8297f0f19da086221763dd9229e83af5ebd549082d2ac30aed6c->enter($__internal_8c580746244a8297f0f19da086221763dd9229e83af5ebd549082d2ac30aed6c_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "FSPBundle:User:supprimer.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_1fb245ba9f3c64b69a41910bf6b239d7a4050f5713a6ddc15c4eb9b89294a3ac->leave($__internal_1fb245ba9f3c64b69a41910bf6b239d7a4050f5713a6ddc15c4eb9b89294a3ac_prof);
+        $__internal_8c580746244a8297f0f19da086221763dd9229e83af5ebd549082d2ac30aed6c->leave($__internal_8c580746244a8297f0f19da086221763dd9229e83af5ebd549082d2ac30aed6c_prof);
 
     }
 
     // line 2
     public function block_blocCentre($context, array $blocks = array())
     {
-        $__internal_3ae7f5adceb5a4773ef8bdbd22c108cb8a51977e6ef953d14e1110257f40c9d8 = $this->env->getExtension("native_profiler");
-        $__internal_3ae7f5adceb5a4773ef8bdbd22c108cb8a51977e6ef953d14e1110257f40c9d8->enter($__internal_3ae7f5adceb5a4773ef8bdbd22c108cb8a51977e6ef953d14e1110257f40c9d8_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "blocCentre"));
+        $__internal_e755b912d2d74b9f73ba998aed89e36777e90628503a88582da9f0ea81094a5d = $this->env->getExtension("native_profiler");
+        $__internal_e755b912d2d74b9f73ba998aed89e36777e90628503a88582da9f0ea81094a5d->enter($__internal_e755b912d2d74b9f73ba998aed89e36777e90628503a88582da9f0ea81094a5d_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "blocCentre"));
 
         // line 3
         echo "  <div id=\"blocCentre\">
@@ -91,7 +91,7 @@ class __TwigTemplate_f440bd11faef5ae71feb36c3b2deeed77e4b9eb474e8d943e63d670a19c
             echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("fsp_supprimerannonce", array("id" => $this->getAttribute($context["uneAnnonce"], "id", array()))), "html", null, true);
             echo "\" alt=\"supprimerannonce\"><button      onclick=\"return confirm('Voulez-vous vraiment supprimer cette annonce?');\"><img src=\"";
             echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("bundles/fsp/images/poubelle.png"), "html", null, true);
-            echo "\" id=\"supprimer\"</img></button></a></td>
+            echo "\" id=\"supprimer\"></img></button></a></td>
        </tr>
        ";
         }
@@ -104,7 +104,7 @@ class __TwigTemplate_f440bd11faef5ae71feb36c3b2deeed77e4b9eb474e8d943e63d670a19c
   </div>
 ";
         
-        $__internal_3ae7f5adceb5a4773ef8bdbd22c108cb8a51977e6ef953d14e1110257f40c9d8->leave($__internal_3ae7f5adceb5a4773ef8bdbd22c108cb8a51977e6ef953d14e1110257f40c9d8_prof);
+        $__internal_e755b912d2d74b9f73ba998aed89e36777e90628503a88582da9f0ea81094a5d->leave($__internal_e755b912d2d74b9f73ba998aed89e36777e90628503a88582da9f0ea81094a5d_prof);
 
     }
 
@@ -143,7 +143,7 @@ class __TwigTemplate_f440bd11faef5ae71feb36c3b2deeed77e4b9eb474e8d943e63d670a19c
 /*            <td class="titre"><a href="{{path('fsp_afficherannonce',{'id':uneAnnonce.id})}}" class="titreclick" alt="titreannonce">{{titre}}</a></td>*/
 /*            <td class="date">Le {{date}}</td>*/
 /*            <td class="statut"><img src="{{asset('bundles/fsp/images/')}}{{image}}" id="statut"></img></td>*/
-/*            <td class="supprimer"><a href="{{path('fsp_supprimerannonce',{'id':uneAnnonce.id})}}" alt="supprimerannonce"><button      onclick="return confirm('Voulez-vous vraiment supprimer cette annonce?');"><img src="{{asset('bundles/fsp/images/poubelle.png')}}" id="supprimer"</img></button></a></td>*/
+/*            <td class="supprimer"><a href="{{path('fsp_supprimerannonce',{'id':uneAnnonce.id})}}" alt="supprimerannonce"><button      onclick="return confirm('Voulez-vous vraiment supprimer cette annonce?');"><img src="{{asset('bundles/fsp/images/poubelle.png')}}" id="supprimer"></img></button></a></td>*/
 /*        </tr>*/
 /*        {% endfor %}*/
 /*      </table>*/

@@ -134,7 +134,7 @@ class UserController extends Controller
   return $this->render('FSPBundle:User:mesannonces.html.twig',array('lesAnnonces'=>$lesAnnonces));
  }
 
- public function afficherannonceAction($id)
+ public function afficherannonceAction()
  {
   $session=$this->get('request')->getSession();
   $pdo = $this->get('fsp.pdo');
@@ -159,14 +159,28 @@ class UserController extends Controller
   $refidtheme = $request->request->get('theme');
   $refidetat = $request->request->get('etat');
   $lesAnnonces = $pdo->getAnnoncesUser($refemail);
-  $pdo ->getModifierAnnonce();
   return $this->render('FSPBundle:User:modifierannonce.html.twig', array('lesAnnonces'=>$lesAnnonces));
  }
 
+ public function validermodiferAction($id)
+ {
+  $session = $this->get('request')->getSession();
+  $request = $this->get('request');
+  $pdo = $this->get('fsp.pdo');
+  $titre = $request->request->get('titre');
+  $date = $request->request->get('date');
+  $contenu = $request->request->get('contenu');
+  $refemail = $session->get('email');
+  $refnomlangue = $request->request->get('langue');
+  $refidtheme = $request->request->get('theme');
+  $refidetat = $request->request->get('etat');
+  $pdo->modifierAnnonce($refemail);
+  $lesAnnonces = $pdo->getAnnoncesUser($id);
+  return $this->render('FSPBudnle:User:mesannonces.html.twig', array ('lesAnnonces'=>$lesAnnonces));
+ }
   public function ajouterAnnonceAction()
   {
-   $pdo = $this->get('fsp.pdo');
-   $pdo -> getajouterAnnonce(); 
+
    return $this->render('FSPBundle:User:ajouter.html.twig');
   }
 
@@ -183,6 +197,33 @@ class UserController extends Controller
   return $this->render('FSPBundle:User:supprimer.html.twig', array('lesAnnonces'=>$lesAnnonces));
  } 
 
+public function affichercomAction()
+{
+  $session = $this->get('request')->getSession();
+  $request = $this->get('request');
+  $pdo = $this->get('fsp.pdo');
+  $id = $request->request->get('id');
+  $lesCommentaires = $pdo->getCommentaireAnnonce($id);
+  return $this->render('FSPBundle:User:affichercom.html.twig', array('lesCommentaires'=>$lesCommentaires));
+}
 
+public function ajoutercomAction()
+{
+ return $this->render('FSPBundle:User:ajoutercom.html.twig');
+}
+
+public function validercommentaireAction()
+{
+  $session = $this->get('request')->getSession();
+  $request = $this->get('request');
+  $pdo = $this->get('fsp.pdo');
+  $refemail = $session->get('email');
+  $id = $request->request->get('id');
+  $contenu = $request->request->get('contenu');
+  $date = $request->request->get('date');
+  $pdo->ajoutCommentaire($date,$contenu,$refemail);
+  $lesAnnonces = $pdo->getAnnonces();
+  return $this->render('FSPBundle:User:afficherannonce.html.twig', array('lesAnnonces'=>$lesAnnonces));
+}
 
 }

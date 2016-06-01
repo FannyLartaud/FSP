@@ -510,20 +510,36 @@ a.titreclick:hover
  margin: -25px 0 0 220px; 
 }
 
+/*Commentaires*/
+
+.affichercom
+{
+ font-family: pakenham;
+ font-size: 18px;
+ margin: 10px 0 -40px 10px;
+}
+
+.ajoutercom
+{
+ font-family: pakenham;
+ font-size: 18px;
+ margin: 10px 0 -40px 250px;
+}
 /*Annonces*/
 
-.titre, .date, .prenom, .statut, .modifier, .supprimer
+.theme, .titre, .date, .prenom, .statut, .modifier, .supprimer
 {
  font-family: pakenham;
  font-size: 19px;
  float: left;
  height: 30px;
+ margin: -20px 0 25px 0;
 }
 
 #statut
 {
  height: 45px;
- margin: -50px 0 -15px 0;
+ margin: -50px 0 -25px 0;
 }
 
 #theme
@@ -550,6 +566,7 @@ table.listeAnnonce td.titre
 {
  width: 50%;
 }
+
 
 table.listeAnnonce caption
 {

@@ -1,6 +1,6 @@
 <?php
 
-/* @WebProfiler/Router/panel.html.twig */
+/* WebProfilerBundle:Router:panel.html.twig */
 class __TwigTemplate_26f4ed760fd2eb4dac1b2a18e9df04f605e7fef41f5217a6611884302738955c extends Twig_Template
 {
     public function __construct(Twig_Environment $env)
@@ -15,8 +15,8 @@ class __TwigTemplate_26f4ed760fd2eb4dac1b2a18e9df04f605e7fef41f5217a661188430273
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_34a67fca2fe9ef1c276f131bf43a884c77edde2f93ebdfc3ab743843a04b2b4f = $this->env->getExtension("native_profiler");
-        $__internal_34a67fca2fe9ef1c276f131bf43a884c77edde2f93ebdfc3ab743843a04b2b4f->enter($__internal_34a67fca2fe9ef1c276f131bf43a884c77edde2f93ebdfc3ab743843a04b2b4f_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@WebProfiler/Router/panel.html.twig"));
+        $__internal_947216722c810e1cd17ed6bfc8db7320914768fab9077d0b6b87b1e46c793d1b = $this->env->getExtension("native_profiler");
+        $__internal_947216722c810e1cd17ed6bfc8db7320914768fab9077d0b6b87b1e46c793d1b->enter($__internal_947216722c810e1cd17ed6bfc8db7320914768fab9077d0b6b87b1e46c793d1b_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "WebProfilerBundle:Router:panel.html.twig"));
 
         // line 1
         echo "<h2>Routing</h2>
@@ -197,13 +197,13 @@ $context["trace"], "level", array()) == 2)) {
 </p>
 ";
         
-        $__internal_34a67fca2fe9ef1c276f131bf43a884c77edde2f93ebdfc3ab743843a04b2b4f->leave($__internal_34a67fca2fe9ef1c276f131bf43a884c77edde2f93ebdfc3ab743843a04b2b4f_prof);
+        $__internal_947216722c810e1cd17ed6bfc8db7320914768fab9077d0b6b87b1e46c793d1b->leave($__internal_947216722c810e1cd17ed6bfc8db7320914768fab9077d0b6b87b1e46c793d1b_prof);
 
     }
 
     public function getTemplateName()
     {
-        return "@WebProfiler/Router/panel.html.twig";
+        return "WebProfilerBundle:Router:panel.html.twig";
     }
 
     public function isTraitable()

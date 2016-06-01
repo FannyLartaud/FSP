@@ -21,20 +21,20 @@ class __TwigTemplate_66e772bca1581a2be0ef5d33ae1e7273ddb21750739f8d1b51cb9bf050a
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_ade23188cdac95f959af7e6e97b85d03c41a3f4d652a0617203cb377b89fdbcc = $this->env->getExtension("native_profiler");
-        $__internal_ade23188cdac95f959af7e6e97b85d03c41a3f4d652a0617203cb377b89fdbcc->enter($__internal_ade23188cdac95f959af7e6e97b85d03c41a3f4d652a0617203cb377b89fdbcc_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "FSPBundle:User:compte.html.twig"));
+        $__internal_6dfed09016ecafcfcdb9414ca3c67f03f9db23ad1f59bb8f4581e7d9c4c47edb = $this->env->getExtension("native_profiler");
+        $__internal_6dfed09016ecafcfcdb9414ca3c67f03f9db23ad1f59bb8f4581e7d9c4c47edb->enter($__internal_6dfed09016ecafcfcdb9414ca3c67f03f9db23ad1f59bb8f4581e7d9c4c47edb_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "FSPBundle:User:compte.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_ade23188cdac95f959af7e6e97b85d03c41a3f4d652a0617203cb377b89fdbcc->leave($__internal_ade23188cdac95f959af7e6e97b85d03c41a3f4d652a0617203cb377b89fdbcc_prof);
+        $__internal_6dfed09016ecafcfcdb9414ca3c67f03f9db23ad1f59bb8f4581e7d9c4c47edb->leave($__internal_6dfed09016ecafcfcdb9414ca3c67f03f9db23ad1f59bb8f4581e7d9c4c47edb_prof);
 
     }
 
     // line 2
     public function block_blocCentre($context, array $blocks = array())
     {
-        $__internal_8b09aa911bd17106f5fbd6709a4a4dad68318f1a80fafda7fd68b7f12e40860e = $this->env->getExtension("native_profiler");
-        $__internal_8b09aa911bd17106f5fbd6709a4a4dad68318f1a80fafda7fd68b7f12e40860e->enter($__internal_8b09aa911bd17106f5fbd6709a4a4dad68318f1a80fafda7fd68b7f12e40860e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "blocCentre"));
+        $__internal_5eeb814f2b66b7797ac99dfc7d3cf54f310799644c0e2dce293a74e94ded708d = $this->env->getExtension("native_profiler");
+        $__internal_5eeb814f2b66b7797ac99dfc7d3cf54f310799644c0e2dce293a74e94ded708d->enter($__internal_5eeb814f2b66b7797ac99dfc7d3cf54f310799644c0e2dce293a74e94ded708d_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "blocCentre"));
 
         // line 3
         echo "  <div id=\"blocCentre\">
@@ -71,25 +71,24 @@ class __TwigTemplate_66e772bca1581a2be0ef5d33ae1e7273ddb21750739f8d1b51cb9bf050a
             echo "\t    ";
             $context["image"] = $this->getAttribute($context["uneAnnonce"], "image", array());
             // line 18
-            echo "   
-       <tr>
+            echo "       <tr>
            <td class=\"theme\"><img src=\"";
-            // line 20
+            // line 19
             echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("bundles/fsp/images/"), "html", null, true);
             echo twig_escape_filter($this->env, (isset($context["imageTheme"]) ? $context["imageTheme"] : $this->getContext($context, "imageTheme")), "html", null, true);
             echo "\" id=\"theme\"></img></td>
 \t       <td class=\"titre\"><a href=\"";
-            // line 21
+            // line 20
             echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("fsp_afficherannonce", array("id" => $this->getAttribute($context["uneAnnonce"], "id", array()))), "html", null, true);
             echo "\" class=\"titreclick\" alt=\"titreannonce\">";
             echo twig_escape_filter($this->env, (isset($context["titre"]) ? $context["titre"] : $this->getContext($context, "titre")), "html", null, true);
             echo "</a></td>
            <td class=\"date\">Le ";
-            // line 22
+            // line 21
             echo twig_escape_filter($this->env, (isset($context["date"]) ? $context["date"] : $this->getContext($context, "date")), "html", null, true);
             echo "</td>
            <td class=\"statut\"><img src=\"";
-            // line 23
+            // line 22
             echo twig_escape_filter($this->env, $this->env->getExtension('asset')->getAssetUrl("bundles/fsp/images/"), "html", null, true);
             echo twig_escape_filter($this->env, (isset($context["image"]) ? $context["image"] : $this->getContext($context, "image")), "html", null, true);
             echo "\" id=\"statut\"></img></td>
@@ -99,13 +98,13 @@ class __TwigTemplate_66e772bca1581a2be0ef5d33ae1e7273ddb21750739f8d1b51cb9bf050a
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['uneAnnonce'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 26
+        // line 25
         echo "     </table>
    </div>
   </div>
 ";
         
-        $__internal_8b09aa911bd17106f5fbd6709a4a4dad68318f1a80fafda7fd68b7f12e40860e->leave($__internal_8b09aa911bd17106f5fbd6709a4a4dad68318f1a80fafda7fd68b7f12e40860e_prof);
+        $__internal_5eeb814f2b66b7797ac99dfc7d3cf54f310799644c0e2dce293a74e94ded708d->leave($__internal_5eeb814f2b66b7797ac99dfc7d3cf54f310799644c0e2dce293a74e94ded708d_prof);
 
     }
 
@@ -121,7 +120,7 @@ class __TwigTemplate_66e772bca1581a2be0ef5d33ae1e7273ddb21750739f8d1b51cb9bf050a
 
     public function getDebugInfo()
     {
-        return array (  103 => 26,  93 => 23,  89 => 22,  83 => 21,  78 => 20,  74 => 18,  71 => 17,  68 => 16,  65 => 15,  62 => 14,  58 => 13,  51 => 9,  47 => 8,  40 => 3,  34 => 2,  11 => 1,);
+        return array (  102 => 25,  92 => 22,  88 => 21,  82 => 20,  77 => 19,  74 => 18,  71 => 17,  68 => 16,  65 => 15,  62 => 14,  58 => 13,  51 => 9,  47 => 8,  40 => 3,  34 => 2,  11 => 1,);
     }
 }
 /* {% extends "FSPBundle:User:accueil.html.twig" %}*/
@@ -141,7 +140,6 @@ class __TwigTemplate_66e772bca1581a2be0ef5d33ae1e7273ddb21750739f8d1b51cb9bf050a
 /* 	    {% set titre      = uneAnnonce.titre %}*/
 /* 	    {% set date       = uneAnnonce.date %}*/
 /* 	    {% set image      = uneAnnonce.image %}*/
-/*    */
 /*        <tr>*/
 /*            <td class="theme"><img src="{{asset('bundles/fsp/images/')}}{{imageTheme}}" id="theme"></img></td>*/
 /* 	       <td class="titre"><a href="{{path('fsp_afficherannonce',{'id':uneAnnonce.id})}}" class="titreclick" alt="titreannonce">{{titre}}</a></td>*/

@@ -18,7 +18,7 @@
            <td class="titre"><a href="{{path('fsp_afficherannonce',{'id':uneAnnonce.id})}}" class="titreclick" alt="titreannonce">{{titre}}</a></td>
            <td class="date">Le {{date}}</td>
            <td class="statut"><img src="{{asset('bundles/fsp/images/')}}{{image}}" id="statut"></img></td>
-           <td class="supprimer"><a href="{{path('fsp_supprimerannonce',{'id':uneAnnonce.id})}}" alt="supprimerannonce"><button      onclick="return confirm('Voulez-vous vraiment supprimer cette annonce?');"><img src="{{asset('bundles/fsp/images/poubelle.png')}}" id="supprimer"</img></button></a></td>
+           <td class="supprimer"><a href="{{path('fsp_supprimerannonce',{'id':uneAnnonce.id})}}" alt="supprimerannonce"><button      onclick="return confirm('Voulez-vous vraiment supprimer cette annonce?');"><img src="{{asset('bundles/fsp/images/poubelle.png')}}" id="supprimer"></img></button></a></td>
        </tr>
        {% endfor %}
      </table>
