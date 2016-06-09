@@ -10,9 +10,9 @@
   <div id="page">
     <div id="entete">
      <a href="{{path('fsp_accueil')}}"><img src=" {{ asset('bundles/fsp/images/FSP.png') }}" id="logoFSP" alt="FSP - Foreign Student Platform" title="FSP - Foreign Student Platform"/></a>
-     <img src="{{ asset('bundles/fsp/images/france.png')}}" id="drapeauFR" alt="Français" title="Français" />
-     <img src="{{ asset('bundles/fsp/images/GB.png')}}" id="drapeauGB" alt="Anglais" title="Anglais" />
-     <img src="{{ asset('bundles/fsp/images/chine.png')}}" id="drapeauCH" alt="Chinois" title="Chinois" />
+     <a href="{{path('fsp_francais')}}" title="Francais"><img src="{{ asset('bundles/fsp/images/france.png')}}" id="drapeauFR" alt="Français" title="Français" /></a>
+     <a href="{{path('fsp_anglais')}}" title="Anglais"><img src="{{ asset('bundles/fsp/images/GB.png')}}" id="drapeauGB" alt="Anglais" title="Anglais" /></a>
+     <a href="{{('fsp_chinois')}}" title="Chinois"><img src="{{ asset('bundles/fsp/images/chine.png')}}" id="drapeauCH" alt="Chinois" title="Chinois" /></a>
      </div>
      <div id="menuTheme">
       <ul id="menuListAccueil">

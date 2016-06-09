@@ -123,7 +123,6 @@ class UserController extends Controller
 
  }
 
-
  public function mesannoncesAction()
  {
   $session = $this->get('request')->getSession();
@@ -204,7 +203,8 @@ public function affichercomAction()
   $pdo = $this->get('fsp.pdo');
   $id = $request->request->get('id');
   $lesCommentaires = $pdo->getCommentaireAnnonce($id);
-  return $this->render('FSPBundle:User:affichercom.html.twig', array('lesCommentaires'=>$lesCommentaires));
+  $lesAnnonces = $pdo->getAnnonces();
+  return $this->render('FSPBundle:User:affichercom.html.twig', array('lesCommentaires'=>$lesCommentaires, 'lesAnnonces'=>$lesAnnonces));
 }
 
 public function ajoutercomAction()

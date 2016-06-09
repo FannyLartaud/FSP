@@ -21,20 +21,20 @@ class __TwigTemplate_6176128bc01bb39bd88c61862f29f6e9028598ceabf7bc73ea7bd87bdfa
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_831446134881cc126d45f9e78f9595d695c47168fc6ced1b1c12edb09179f961 = $this->env->getExtension("native_profiler");
-        $__internal_831446134881cc126d45f9e78f9595d695c47168fc6ced1b1c12edb09179f961->enter($__internal_831446134881cc126d45f9e78f9595d695c47168fc6ced1b1c12edb09179f961_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "FSPBundle:User:ajoutercom.html.twig"));
+        $__internal_9a7ab16ee3ecad41efd739622d86e34fb409912098dbb04c04c01586b25da200 = $this->env->getExtension("native_profiler");
+        $__internal_9a7ab16ee3ecad41efd739622d86e34fb409912098dbb04c04c01586b25da200->enter($__internal_9a7ab16ee3ecad41efd739622d86e34fb409912098dbb04c04c01586b25da200_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "FSPBundle:User:ajoutercom.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_831446134881cc126d45f9e78f9595d695c47168fc6ced1b1c12edb09179f961->leave($__internal_831446134881cc126d45f9e78f9595d695c47168fc6ced1b1c12edb09179f961_prof);
+        $__internal_9a7ab16ee3ecad41efd739622d86e34fb409912098dbb04c04c01586b25da200->leave($__internal_9a7ab16ee3ecad41efd739622d86e34fb409912098dbb04c04c01586b25da200_prof);
 
     }
 
     // line 2
     public function block_blocCentre($context, array $blocks = array())
     {
-        $__internal_e6cedb40da848f28cf287fdd0beacf37bf542d705d9f20804e9500911b0cfc3f = $this->env->getExtension("native_profiler");
-        $__internal_e6cedb40da848f28cf287fdd0beacf37bf542d705d9f20804e9500911b0cfc3f->enter($__internal_e6cedb40da848f28cf287fdd0beacf37bf542d705d9f20804e9500911b0cfc3f_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "blocCentre"));
+        $__internal_8afa7fec52079e1a86108c72a2177143db019a260f51e9ae8ce71ed18e446911 = $this->env->getExtension("native_profiler");
+        $__internal_8afa7fec52079e1a86108c72a2177143db019a260f51e9ae8ce71ed18e446911->enter($__internal_8afa7fec52079e1a86108c72a2177143db019a260f51e9ae8ce71ed18e446911_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "blocCentre"));
 
         // line 3
         echo "  <div id=\"blocCentre\">
@@ -46,10 +46,6 @@ class __TwigTemplate_6176128bc01bb39bd88c61862f29f6e9028598ceabf7bc73ea7bd87bdfa
         // line 8
         echo $this->env->getExtension('routing')->getPath("fsp_validercommentaire");
         echo "\" class=\"formAjoutercom\">
-      <div class=\"ajouter\">
-       <label for=\"date\"> Date : </label>
-       <input id=\"date\" type=\"date\" name=\"date\" placeholder=\"AAAA/MM/JJ\"/></br>
-       <br/>
        <label for=\"info\"> Contenu du commentaire: </label></br>
        <textarea name=\"contenu\" id=\"info\" rows=\"10\" cols=\"50\"  onfocus=\"if(this.value=='Votre commentaire ici.'){this.value='';}\" onblur=\"if(this.value==''){this.value='Votre commentaire ici.';}\">Votre commentaire ici.</textarea>
        <br/>
@@ -61,7 +57,7 @@ class __TwigTemplate_6176128bc01bb39bd88c61862f29f6e9028598ceabf7bc73ea7bd87bdfa
   </div>
 ";
         
-        $__internal_e6cedb40da848f28cf287fdd0beacf37bf542d705d9f20804e9500911b0cfc3f->leave($__internal_e6cedb40da848f28cf287fdd0beacf37bf542d705d9f20804e9500911b0cfc3f_prof);
+        $__internal_8afa7fec52079e1a86108c72a2177143db019a260f51e9ae8ce71ed18e446911->leave($__internal_8afa7fec52079e1a86108c72a2177143db019a260f51e9ae8ce71ed18e446911_prof);
 
     }
 
@@ -88,10 +84,6 @@ class __TwigTemplate_6176128bc01bb39bd88c61862f29f6e9028598ceabf7bc73ea7bd87bdfa
 /*      <h3>Ajouter un commentaire</h3>*/
 /*     </div>*/
 /*      <form method="POST" action="{{path('fsp_validercommentaire')}}" class="formAjoutercom">*/
-/*       <div class="ajouter">*/
-/*        <label for="date"> Date : </label>*/
-/*        <input id="date" type="date" name="date" placeholder="AAAA/MM/JJ"/></br>*/
-/*        <br/>*/
 /*        <label for="info"> Contenu du commentaire: </label></br>*/
 /*        <textarea name="contenu" id="info" rows="10" cols="50"  onfocus="if(this.value=='Votre commentaire ici.'){this.value='';}" onblur="if(this.value==''){this.value='Votre commentaire ici.';}">Votre commentaire ici.</textarea>*/
 /*        <br/>*/

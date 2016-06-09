@@ -562,9 +562,19 @@ table.listeAnnonce th, table.listeAnnonce td
  text-align: left;
 }
 
+table.listeAnnonce td.date
+{
+ width: 15%;
+}
+
+table.listeAnnonce td.prenom
+{
+ width: 10%;
+}
+
 table.listeAnnonce td.titre
 {
- width: 50%;
+ width: 40%;
 }
 
 

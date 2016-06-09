@@ -111,6 +111,19 @@ fsp_validercommentaire:
     path:   /valider-ajout-com
     defaults: { _controller: FSPBundle:User:validercommentaire }
 
+fsp_francais:
+    path:   /
+    defaults: { _controller: FSPBundle:Home:francais }
+
+fsp_anglais:
+    path:   /
+    defaults: { _controller: FSPBundle:Home:anglais }
+
+fsp_chinois:
+    path:   /
+    defaults: { _controller: FSPbundle:Home:chinois }
+
+
 
 
 

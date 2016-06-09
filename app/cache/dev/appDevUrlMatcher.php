@@ -259,6 +259,33 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
             return array (  '_controller' => 'IRAM\\FSPBundle\\Controller\\UserController::validercommentaireAction',  '_route' => 'fsp_validercommentaire',);
         }
 
+        // fsp_francais
+        if (rtrim($pathinfo, '/') === '') {
+            if (substr($pathinfo, -1) !== '/') {
+                return $this->redirect($pathinfo.'/', 'fsp_francais');
+            }
+
+            return array (  '_controller' => 'IRAM\\FSPBundle\\Controller\\HomeController::francaisAction',  '_route' => 'fsp_francais',);
+        }
+
+        // fsp_anglais
+        if (rtrim($pathinfo, '/') === '') {
+            if (substr($pathinfo, -1) !== '/') {
+                return $this->redirect($pathinfo.'/', 'fsp_anglais');
+            }
+
+            return array (  '_controller' => 'IRAM\\FSPBundle\\Controller\\HomeController::anglaisAction',  '_route' => 'fsp_anglais',);
+        }
+
+        // fsp_chinois
+        if (rtrim($pathinfo, '/') === '') {
+            if (substr($pathinfo, -1) !== '/') {
+                return $this->redirect($pathinfo.'/', 'fsp_chinois');
+            }
+
+            return array (  '_controller' => 'FSPbundle:Home:chinois',  '_route' => 'fsp_chinois',);
+        }
+
         // homepage
         if (rtrim($pathinfo, '/') === '') {
             if (substr($pathinfo, -1) !== '/') {

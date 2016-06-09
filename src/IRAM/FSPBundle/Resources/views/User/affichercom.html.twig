@@ -3,6 +3,12 @@
   <div id="blocCentre">
    <div id="contenu">
     <div id="gererAnnonces">
+    {% for uneAnnonce in lesAnnonces %}
+       {% set titre = uneAnnonce.titre %}
+       {% set contenuannonce = uneAnnonce.contenu %}
+       {% set dateannonce = uneAnnonce.date %}
+       {% set prenomannonce = uneAnnonce.prenom %}
+       {% set nomannonce = uneAnnonce.nom %}
     {% for unCommentaire in lesCommentaires %}
       {% set contenu = unCommentaire.contenu %}
       {% set date = unCommentaire.date %}
@@ -10,10 +16,13 @@
       {% set nom = unCommentaire.nom %}
        <h3>{{titre}}</h3>
       </div> 
-     <p>{{contenu}} </br>
+     <p>{{contenuannonce}} </br>
        </br>
-       Ajoutée le {{date}} par {{prenom}} {{nom}}</p>
+       Ajoutée le {{dateannonce}} par {{prenomannonce}} {{nomannonce}}</p>
+
+       <p> {{contenu}} ajouté le {{date}} par {{prenom}} {{nom}} </p>
    </div>
   </div>
+    {% endfor %}
     {% endfor %}
 {% endblock %}

@@ -11,7 +11,7 @@ class PdoFsp{
 		private static $monPdoFsp=null;
 	
         public function __construct(){
-    	PdoFsp::$monPdo = new PDO(PdoFsp::$serveur.';'.PdoFsp::$bdd, PdoFsp::$user, PdoFsp::$mdp); 
+    	PdoFsp::$monPdo = new PDO(PdoFsp::$serveur.';'.PdoFsp::$bdd, PdoFsp::$user, PdoFsp::$mdp, array(PDO::ATTR_ERRMODE=>PDO::ERRMODE_EXCEPTION)); 
 		PdoFsp::$monPdo->query("SET CHARACTER SET utf8");
 	}
 	public function _destruct(){
@@ -70,7 +70,7 @@ class PdoFsp{
 	 }
 
 	public function getCommentaireAnnonce($id){
-		$req = "SELECT commentaire.contenu as contenu, commentaire.date as date, profil.nom as nom, profil.prenom as prenom from commentaire, profil, annonce where commentaire.refemail = profil.email and commentaire.refidannonce = annonce.id and annonce.id = '$id' order by date desc";
+		$req = "SELECT commentaire.contenu as contenu, commentaire.date as date, annonce.contenu, annonce.date, annonce.titre, profil.nom as nom, profil.prenom as prenom from commentaire, profil, annonce where commentaire.refemail = profil.email and commentaire.refidannonce = annonce.id and annonce.id = '$id' order by commentaire.date desc";
 		      $rs = PdoFsp::$monPdo->query($req);
 		      $lesLignes = $rs->fetchAll();
            $nbLignes = count($lesLignes);
@@ -95,11 +95,12 @@ var_dump ($req);
 	}
 
 	    public function ajoutCommentaire($date,$contenu,$refemail){
-	$req ="INSERT INTO `commentaire` (`id`, `date`, `contenu`, `refemail`) VALUES (NULL, '$date', '$contenu', '$refemail')";
+	$req ="INSERT INTO `commentaire` (`id`, `date`, `contenu`, `refemail`) VALUES (NULL, NOW(), '$contenu', '$refemail')";
 var_dump ($req);
         PdoFsp::$monPdo->exec($req);
 	    }
 
+	    
 	public function getAfficherAnnonce($id){
 		$req = " SELECT annonce.titre as titre, annonce.date as date,  annonce.contenu as contenu, profil.nom as nom, profil.prenom as prenom from annonce, profil where annonce.refemail = profil.email and annonce.id = '$id'" ;
 var_dump ($req);
